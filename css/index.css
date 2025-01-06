@@ -1,75 +1,16 @@
-/* 전체영역 */
-.mainArea1{
-    margin: 0 auto;
-    border: 3px solid #ddd;
-    width: 1900px;
-    min-height: 900px;
-}
-/* 전체영역의 있는 Area1 */
-.mainArea2{
-    margin: 0 auto;
-    width: 1900px;
-    height: 65px;
-    border: 1px solid red;
-}
-
-/* 상단 네비게이션바 CSS */
-.navTop{
-    display: flex;
-    align-items: center;    /* 수직 가운데 정렬 */
-    background-color: black;
-}
-
-/* 각 메뉴 1개 */
-.navTop > div{
-    width: 125px;
-    height: 65px;
-    border: 1px solid blue;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-weight: bold;
-    font-size: 1.5em;
-    color: white;
-    margin: 0 20px;
-}
-
-/* 메인 이미지 영역 */
-.mainImageArea{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    width: 1900px;
-    height: 700px;
-    margin: 1px auto;
-}
-.mainImage{
-    width: 1900px;
-    height: 700px;
-}
-
-
-
-
-
-
-
-
 /* 전체 영역 */
 .mainArea1 {
     margin: 0 auto;
     border: 3px solid #ddd;
-    max-width: 100%;
+    max-width: 100%; /* 화면 크기에 맞게 조정 */
     min-height: 900px;
-    box-sizing: border-box;
+    box-sizing: border-box; /* 패딩과 보더 포함 */
 }
 
 /* 상단 메뉴 영역 */
 .mainArea2 {
     margin: 0 auto;
-    max-width: 100%;
+    width: 100%; /* 화면 크기에 맞게 조정 */
     height: 65px;
     border: 1px solid red;
 }
@@ -77,24 +18,24 @@
 /* 네비게이션 바 */
 .navTop {
     display: flex;
-    flex-wrap: wrap; /* 메뉴가 화면 크기에 따라 줄바꿈 */
+    flex-wrap: wrap; /* 화면 크기에 따라 줄바꿈 */
     align-items: center;
-    justify-content: space-around;
+    justify-content: center; /* 중앙 정렬 */
     background-color: black;
-    padding: 0 10px;
+    padding: 5px 10px; /* 상하좌우 여백 */
 }
 
 /* 개별 메뉴 스타일 */
 .navTop > div {
     flex: 1; /* 각 메뉴가 같은 비율로 크기 조정 */
-    min-width: 80px; /* 최소 너비 설정 */
-    max-width: 125px; /* 최대 너비 설정 */
-    height: 65px;
+    min-width: 100px; /* 최소 너비 설정 */
+    max-width: 150px; /* 최대 너비 설정 */
+    height: 50px; /* 높이 조정 */
     display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-content: center; /* 텍스트 수평 정렬 */
+    align-items: center; /* 텍스트 수직 정렬 */
     font-weight: bold;
-    font-size: 1em;
+    font-size: 1em; /* 글자 크기 조정 */
     color: white;
     border: 1px solid blue;
     margin: 5px; /* 메뉴 간격 조정 */
@@ -104,47 +45,48 @@
 /* 메인 이미지 영역 */
 .mainImageArea {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    max-width: 100%;
+    justify-content: center; /* 이미지 수평 정렬 */
+    align-items: center; /* 이미지 수직 정렬 */
+    width: 100%;
     height: auto;
     margin: 10px auto;
 }
 
 .mainImage {
-    width: 100%;
-    height: auto;
+    width: 100%; /* 화면 크기에 맞게 조정 */
+    height: auto; /* 비율 유지 */
 }
 
-/* 미디어 쿼리: 768px 이하 */
+/* 미디어 쿼리: 768px 이하 (태블릿) */
 @media screen and (max-width: 768px) {
     .mainArea1 {
         min-height: auto;
     }
 
+    .navTop {
+        flex-wrap: wrap; /* 메뉴를 줄바꿈 */
+        justify-content: space-around; /* 메뉴 간격 균등 */
+    }
+
     .navTop > div {
-        font-size: 0.8em; /* 글자 크기 축소 */
-        margin: 3px; /* 간격 축소 */
-    }
-
-    .mainImageArea {
-        height: auto;
-    }
-
-    .mainImage {
-        max-width: 100%;
+        font-size: 0.9em; /* 글자 크기 축소 */
+        width: 30%; /* 메뉴를 3개씩 배치 */
+        height: 50px;
+        margin: 5px 0;
     }
 }
 
-/* 미디어 쿼리: 480px 이하 */
+/* 미디어 쿼리: 480px 이하 (스마트폰) */
 @media screen and (max-width: 480px) {
     .navTop {
-        flex-wrap: wrap; /* 메뉴를 줄바꿈 */
+        flex-wrap: wrap; /* 메뉴 줄바꿈 */
+        justify-content: center; /* 메뉴 중앙 정렬 */
     }
 
     .navTop > div {
-        width: 48%; /* 메뉴를 2개씩 배치 */
-        margin: 5px 1%; /* 간격 설정 */
-        font-size: 0.7em; /* 글자 크기 축소 */
+        width: 45%; /* 메뉴를 2개씩 배치 */
+        font-size: 0.8em; /* 글자 크기 축소 */
+        height: 45px;
+        margin: 5px 2%; /* 좌우 간격 추가 */
     }
 }
