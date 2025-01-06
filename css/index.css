@@ -49,7 +49,7 @@
     justify-content: center;
     align-items: center;
     width: 150px;
-    height: 75px;
+    height: 70px;
 }
 
 /* 메인 이미지 영역 */
@@ -80,48 +80,63 @@
     margin: 0 auto;
     margin-top: 10px;
     margin-bottom: 10px;
-
-    border: 3px solid red;
+}
+.mainArea4 > div, .mainArea4 > div > img{
+    width: 810px;
+    height: 1100px;
+    border-radius: 10px;
 }
 
 /* 사업안내 / 입지환경 영역 */
-.mainArea5{
+.mainArea5 {
     display: flex;
     justify-content: center;
     align-items: center;
-
     font-size: 1.5em;
 }
-.mainArea5-row1 , .mainArea5-row2{
+
+.mainArea5-row1, .mainArea5-row2 {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
     width: 500px;
     height: 200px;
-
-    border: 1px solid blue;
-
     margin: 1px;
 }
-.mainArea5-row1 > :nth-child(n) , .mainArea5-row2 > :nth-child(n){
+/* 공통 버튼 스타일 */
+.mainArea5-row1 > :nth-child(n), .mainArea5-row2 > :nth-child(n) {
     display: flex;
     justify-content: center;
     align-items: center;
-
+    flex-direction: column;
     width: 500px;
     height: 100px;
-
-    border: 1px solid purple;
+    border-radius: 10px; /* 둥근 모서리 추가 */
+    background-color: #f8f9fa; /* 기본 배경색 */
+    color: #333; /* 기본 글자 색 */
+    font-weight: bold;
     cursor: pointer;
-    
     margin: 1px;
+    transition: all 0.3s ease-in-out; /* 부드러운 전환 효과 */
 }
-.mainArea5-row1-title1,.mainArea5-row1-title2,.mainArea5-row1-title3,.mainArea5-row1-title4{
+/* 버튼 호버 효과 */
+.mainArea5-row1 > :nth-child(n):hover, .mainArea5-row2 > :nth-child(n):hover {
+    background-color: darkgray; /* 호버 시 배경색 변경 */
+    color: white; /* 호버 시 텍스트 색상 변경 */
+    transform: translateY(-3px); /* 살짝 떠오르는 효과 */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* 호버 시 그림자 효과 */
+}
+/* 내부 텍스트 정렬 */
+.mainArea5-row1-title1, .mainArea5-row1-title2, 
+.mainArea5-row1-title3, .mainArea5-row1-title4 {
     display: flex;
     flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
 }
+
 
 /* 영상영역 */
 .mainArea6{
@@ -135,46 +150,157 @@
     margin: 0 auto;
     margin-top: 10px;
     margin-bottom: 10px;
-
-    border: 3px solid blue;
 }
 .mainArea6 > iframe{
     width: 1000px;
     height: 500px;
+    border-radius: 10px;
 }
 
 /* 방문예약상담 영역 */
 .mainArea7{
     display: flex;
-    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 
     width: 1000px;
-    height: 500px;
+    height: 610px;
     margin: 0 auto;
+
+    border-top: 3px solid #ddd;
+    border-bottom: 3px solid #ddd;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    margin-bottom: 15px;
+}
+.mainArea7 > :nth-child(1){
     font-size: 2.0em;
-
-    border: 1px solid red;
-}
-
-/* .mainArea5 > :nth-child(n){
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    width: 500px;
-    height: 200px;
-    margin: 0 5px;
     margin-bottom: 10px;
-
-    cursor: pointer;
-    font-size: 2em;
-
-    border: 1px solid #ddd;
 }
-.mainArea5 > div > :nth-child(n){
+.mainArea7-row2{
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 0 3px;
-} */
+    border: 1px solid;
+}
+/* 문의정보 입력 스타일 */
+.inquiry-title {
+    font-size: 1.8em;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+}
 
+.privacy-policy-text {
+    font-size: 1.2em;
+    color: #777;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.form-section {
+    background-color: #f9f9f9;
+    padding: 30px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.form-title1 {
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #333;
+    text-align: center;
+}
+.form-title2{
+    margin-bottom: 15px;
+    color: gray;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    font-size: 1.1em;
+    color: #555;
+    margin-bottom: 5px;
+    display: block;
+}
+
+.form-group input,.form-group textarea{
+    width: 100%;
+    padding: 10px;
+    font-size: 1em;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+.form-group textarea{
+    font-size: 1.4em;
+    resize: none;
+}
+
+.form-group textarea {
+    height: 150px;
+}
+/* 개인정보취급방침 스타일 */
+.privacy-policy {
+    display: flex;
+    align-items: center;
+    font-size: 1.1em;
+    color: #555;
+    margin-top: 10px;
+}
+
+.privacy-policy input {
+    width: 25px;
+    margin-right: 10px;
+    transform: scale(1.2); /* 체크박스를 조금 크게 */
+}
+
+.privacy-policy label {
+    margin: 0;
+}
+
+.submit-btn {
+    background-color: #007bff;
+    color: white;
+    font-size: 1.2em;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+}
+
+.submit-btn:hover {
+    background-color: #0056b3;
+}
+
+@media (max-width: 768px) {
+    .form-section {
+        padding: 20px;
+    }
+
+    .form-title {
+        font-size: 1.4em;
+    }
+
+    .form-group label {
+        font-size: 1em;
+    }
+
+    .form-group input,
+    .form-group textarea {
+        font-size: 1em;
+    }
+
+    .submit-btn {
+        font-size: 1.1em;
+    }
+}
