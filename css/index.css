@@ -1,9 +1,51 @@
-.testCss{
-    color: blue;
-    font-size: 50px;
+/* 전체영역 */
+.mainArea1{
+    margin: 0 auto;
+    border: 3px solid #ddd;
+    width: 1900px;
+    min-height: 900px;
+}
+/* 전체영역의 있는 Area1 */
+.mainArea2{
+    margin: 0 auto;
+    width: 1900px;
+    height: 65px;
+    border: 1px solid red;
 }
 
-.imageBox{
-    width: 200px;
-    height: 200px;
+/* 상단 네비게이션바 CSS */
+.navTop{
+    display: flex;
+    align-items: center;    /* 수직 가운데 정렬 */
+    background-color: black;
+}
+
+/* 각 메뉴 1개 */
+.navTop > div{
+    width: 125px;
+    height: 65px;
+    border: 1px solid blue;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    font-size: 1.5em;
+    color: white;
+    margin: 0 20px;
+}
+
+/* 메인 이미지 영역 */
+.mainImageArea{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 1900px;
+    height: 700px;
+    margin: 1px auto;
+}
+.mainImage{
+    width: 1900px;
+    height: 700px;
 }
