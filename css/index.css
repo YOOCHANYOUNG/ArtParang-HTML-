@@ -49,3 +49,101 @@
     width: 1900px;
     height: 700px;
 }
+
+
+
+
+
+
+
+
+/* 전체 영역 */
+.mainArea1 {
+    margin: 0 auto;
+    border: 3px solid #ddd;
+    max-width: 100%;
+    min-height: 900px;
+    box-sizing: border-box; /* padding과 border 포함 */
+}
+
+/* 상단 메뉴 영역 */
+.mainArea2 {
+    margin: 0 auto;
+    max-width: 100%;
+    height: 65px;
+    border: 1px solid red;
+}
+
+/* 네비게이션 바 */
+.navTop {
+    display: flex;
+    align-items: center;
+    justify-content: space-around; /* 메뉴 간 간격을 균등 분배 */
+    background-color: black;
+    padding: 0 10px; /* 좌우 여백 */
+}
+
+/* 개별 메뉴 스타일 */
+.navTop > div {
+    flex: 1; /* 유동적으로 크기 조정 */
+    max-width: 125px; /* 최대 크기 제한 */
+    min-width: 80px; /* 최소 크기 제한 */
+    height: 65px;
+    display: flex;
+    justify-content: center; /* 텍스트를 수평 가운데 정렬 */
+    align-items: center; /* 텍스트를 수직 가운데 정렬 */
+    font-weight: bold;
+    font-size: 1em;
+    color: white;
+    border: 1px solid blue;
+    margin: 0 5px;
+    box-sizing: border-box; /* padding과 border 포함 */
+}
+
+/* 메인 이미지 영역 */
+.mainImageArea {
+    display: flex;
+    justify-content: center; /* 이미지를 수평 가운데 정렬 */
+    align-items: center; /* 이미지를 수직 가운데 정렬 */
+    max-width: 100%; /* 화면 크기에 맞게 조정 */
+    height: auto;
+    margin: 10px auto; /* 상하 간격 */
+}
+
+.mainImage {
+    width: 100%; /* 화면 크기에 맞게 조정 */
+    height: auto; /* 비율 유지 */
+}
+
+/* 미디어 쿼리: 768px 이하 */
+@media screen and (max-width: 768px) {
+    .mainArea1 {
+        min-height: auto;
+    }
+
+    .navTop > div {
+        font-size: 0.8em; /* 글자 크기 축소 */
+        margin: 0 2px;
+    }
+
+    .mainImageArea {
+        height: auto;
+    }
+
+    .mainImage {
+        max-width: 100%;
+    }
+}
+
+/* 미디어 쿼리: 480px 이하 */
+@media screen and (max-width: 480px) {
+    .navTop {
+        flex-wrap: wrap; /* 메뉴를 줄바꿈 */
+    }
+
+    .navTop > div {
+        width: 100%; /* 메뉴를 세로로 배치 */
+        margin: 5px 0; /* 위아래 여백 */
+        font-size: 0.7em; /* 글자 크기 축소 */
+    }
+}
