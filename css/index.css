@@ -63,7 +63,7 @@
     border: 3px solid #ddd;
     max-width: 100%;
     min-height: 900px;
-    box-sizing: border-box; /* padding과 border 포함 */
+    box-sizing: border-box;
 }
 
 /* 상단 메뉴 영역 */
@@ -77,42 +77,43 @@
 /* 네비게이션 바 */
 .navTop {
     display: flex;
+    flex-wrap: wrap; /* 메뉴가 화면 크기에 따라 줄바꿈 */
     align-items: center;
-    justify-content: space-around; /* 메뉴 간 간격을 균등 분배 */
+    justify-content: space-around;
     background-color: black;
-    padding: 0 10px; /* 좌우 여백 */
+    padding: 0 10px;
 }
 
 /* 개별 메뉴 스타일 */
 .navTop > div {
-    flex: 1; /* 유동적으로 크기 조정 */
-    max-width: 125px; /* 최대 크기 제한 */
-    min-width: 80px; /* 최소 크기 제한 */
+    flex: 1; /* 각 메뉴가 같은 비율로 크기 조정 */
+    min-width: 80px; /* 최소 너비 설정 */
+    max-width: 125px; /* 최대 너비 설정 */
     height: 65px;
     display: flex;
-    justify-content: center; /* 텍스트를 수평 가운데 정렬 */
-    align-items: center; /* 텍스트를 수직 가운데 정렬 */
+    justify-content: center;
+    align-items: center;
     font-weight: bold;
     font-size: 1em;
     color: white;
     border: 1px solid blue;
-    margin: 0 5px;
-    box-sizing: border-box; /* padding과 border 포함 */
+    margin: 5px; /* 메뉴 간격 조정 */
+    box-sizing: border-box;
 }
 
 /* 메인 이미지 영역 */
 .mainImageArea {
     display: flex;
-    justify-content: center; /* 이미지를 수평 가운데 정렬 */
-    align-items: center; /* 이미지를 수직 가운데 정렬 */
-    max-width: 100%; /* 화면 크기에 맞게 조정 */
+    justify-content: center;
+    align-items: center;
+    max-width: 100%;
     height: auto;
-    margin: 10px auto; /* 상하 간격 */
+    margin: 10px auto;
 }
 
 .mainImage {
-    width: 100%; /* 화면 크기에 맞게 조정 */
-    height: auto; /* 비율 유지 */
+    width: 100%;
+    height: auto;
 }
 
 /* 미디어 쿼리: 768px 이하 */
@@ -123,7 +124,7 @@
 
     .navTop > div {
         font-size: 0.8em; /* 글자 크기 축소 */
-        margin: 0 2px;
+        margin: 3px; /* 간격 축소 */
     }
 
     .mainImageArea {
@@ -142,8 +143,8 @@
     }
 
     .navTop > div {
-        width: 100%; /* 메뉴를 세로로 배치 */
-        margin: 5px 0; /* 위아래 여백 */
+        width: 48%; /* 메뉴를 2개씩 배치 */
+        margin: 5px 1%; /* 간격 설정 */
         font-size: 0.7em; /* 글자 크기 축소 */
     }
 }
