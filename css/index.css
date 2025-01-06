@@ -1,7 +1,6 @@
 /* 전체 영역 */
 .mainArea1 {
     margin: 0 auto;
-    border: 3px solid #ddd;
     max-width: 100%; /* 화면 크기에 맞게 조정 */
     min-height: 900px;
     box-sizing: border-box; /* 패딩과 보더 포함 */
@@ -12,7 +11,6 @@
     margin: 0 auto;
     width: 100%; /* 화면 크기에 맞게 조정 */
     height: auto;
-    border: 1px solid red;
 }
 
 /* 네비게이션 바 */
@@ -21,9 +19,10 @@
     flex-wrap: wrap; /* 화면 크기에 따라 메뉴 줄바꿈 */
     align-items: center;
     justify-content: center; /* 중앙 정렬 */
-    background-color: black;
-    padding: 5px 10px; /* 상하좌우 여백 */
+    background-color: white;
+    opacity: 70%;
     box-sizing: border-box;
+    z-index: 9999;
 }
 
 /* 각 메뉴 */
@@ -31,56 +30,151 @@
     flex: 1; /* 각 메뉴가 동일한 비율로 크기 조정 */
     min-width: 100px; /* 최소 너비 */
     max-width: 150px; /* 최대 너비 */
-    height: 50px;
-    margin: 5px; /* 메뉴 간격 */
+    height: 85px;
+    margin: 0px 30px; /* 메뉴 간격 */
     display: flex;
     justify-content: center;
     align-items: center;
     font-weight: bold;
-    font-size: 1em;
-    color: white;
-    border: 1px solid blue;
+    font-size: 1.7em;
+    color: black;
     box-sizing: border-box; /* 패딩 포함 */
+    
+    cursor: pointer;
+}
+
+/* 로고이미지 */
+.logoImage{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+    height: 75px;
 }
 
 /* 메인 이미지 영역 */
+.mainArea3{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
 .mainImageArea {
     display: flex;
     justify-content: center; /* 중앙 정렬 */
     align-items: center; /* 수직 정렬 */
     width: 100%;
     height: auto;
-    margin: 10px auto;
+    margin-top: -90px;
 }
 
-.mainImage {
-    width: 100%; /* 화면 너비에 맞춤 */
-    height: auto; /* 비율 유지 */
+/* 전단지 영역 */
+.mainArea4{
+    display: flex;
+    justify-items: center;
+    align-items: center;
+
+    width: 810px;
+    height: 1100px;
+
+    margin: 0 auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+
+    border: 3px solid red;
 }
 
-/* 미디어 쿼리: 768px 이하 (태블릿) */
-@media screen and (max-width: 768px) {
-    .navTop > div {
-        flex: 0 0 30%; /* 메뉴를 3개씩 배치 */
-        font-size: 0.9em; /* 글자 크기 조정 */
-        height: 40px;
-    }
+/* 사업안내 / 입지환경 영역 */
+.mainArea5{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
-    .mainImage {
-        max-width: 100%;
-    }
+    font-size: 1.5em;
+}
+.mainArea5-row1 , .mainArea5-row2{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    width: 500px;
+    height: 200px;
+
+    border: 1px solid blue;
+
+    margin: 1px;
+}
+.mainArea5-row1 > :nth-child(n) , .mainArea5-row2 > :nth-child(n){
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 500px;
+    height: 100px;
+
+    border: 1px solid purple;
+    cursor: pointer;
+    
+    margin: 1px;
+}
+.mainArea5-row1-title1,.mainArea5-row1-title2,.mainArea5-row1-title3,.mainArea5-row1-title4{
+    display: flex;
+    flex-direction: column;
 }
 
-/* 미디어 쿼리: 480px 이하 (스마트폰) */
-@media screen and (max-width: 480px) {
-    .navTop {
-        flex-wrap: wrap; /* 줄바꿈 */
-    }
+/* 영상영역 */
+.mainArea6{
+    display: flex;
+    justify-items: center;
+    align-items: center;
 
-    .navTop > div {
-        flex: 0 0 45%; /* 메뉴를 2개씩 배치 */
-        font-size: 0.8em; /* 글자 크기 조정 */
-        height: 40px;
-        margin: 5px 1%; /* 간격 설정 */
-    }
+    width: 1000px;
+    height: 500px;
+
+    margin: 0 auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+
+    border: 3px solid blue;
 }
+.mainArea6 > iframe{
+    width: 1000px;
+    height: 500px;
+}
+
+/* 방문예약상담 영역 */
+.mainArea7{
+    display: flex;
+    justify-content: center;
+
+    width: 1000px;
+    height: 500px;
+    margin: 0 auto;
+    font-size: 2.0em;
+
+    border: 1px solid red;
+}
+
+/* .mainArea5 > :nth-child(n){
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 500px;
+    height: 200px;
+    margin: 0 5px;
+    margin-bottom: 10px;
+
+    cursor: pointer;
+    font-size: 2em;
+
+    border: 1px solid #ddd;
+}
+.mainArea5 > div > :nth-child(n){
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 3px;
+} */
+
